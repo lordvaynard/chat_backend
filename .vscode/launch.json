@@ -1,0 +1,29 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "api",//Launch Program por padrão
+            "args": ["${workspaceFolder}/src/main.ts"],//adicionado
+            "runtimeArgs": ["--nolazy", "-r", "ts-node/register", "-r", "tsconfig-paths/register"],//adicionado
+            "sourceMaps": true,//adicionado
+            "envFile": "${workspaceFolder}/.env",//adicionado
+            "cwd": "${workspaceRoot}",//adicionado
+            "console": "integratedTerminal",//adicionado
+            "protocol": "inspector",//adicionado
+            "runtimeVersion": "16.14.2",
+            // "skipFiles": [
+            //     "<node_internals>/**"
+            // ],
+            // "program": "${workspaceFolder}/src/chat/chat.module.ts",
+            // "preLaunchTask": "tsc: build - tsconfig.json",
+            // "outFiles": [
+            //     "${workspaceFolder}/dist/**/*.js"
+            // ]
+        }
+    ]
+}
